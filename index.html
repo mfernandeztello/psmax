@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psicólogo Max Fernández</title>
+<meta name="description" content="Psicólogo y Mediador Familiar. Atención psicológica en Viña del Mar, Santiago y online. Mediación familiar en Santiago.">
+<style>
+  :root{
+    --bg:#f7f1e8; --card:#fffdf9; --ink:#352c25; --muted:#867668;
+    --line:#ece1d2; --brand:#b06a3d; --brand-soft:#f6ebdf;
+    --cta:#a85d34;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(180deg,#faf5ec 0%,#f4ebda 60%,#efe3cf 100%);
+    background-attachment:fixed;
+    min-height:100vh;display:flex;justify-content:center;
+    padding:40px 18px 56px;line-height:1.5;
+  }
+  .wrap{width:100%;max-width:440px}
+
+  .reveal{opacity:0;transform:translateY(18px);
+    transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  header{text-align:center;margin-bottom:30px}
+  .avatar{
+    width:100%;aspect-ratio:1/1;border-radius:20px;margin:0 auto 18px;
+    background:var(--brand-soft);
+    background-size:cover;background-position:center;
+    border:5px solid var(--card);
+    box-shadow:0 12px 30px rgba(140,90,45,.22);
+  }
+  h1{font-size:21px;font-weight:700}
+  .role{color:var(--brand);font-size:14px;font-weight:600;margin-top:3px}
+  .tagline{color:var(--muted);font-size:13.5px;margin-top:12px}
+  .places{
+    display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px;
+  }
+  .places span{
+    font-size:12px;color:var(--muted);border:1px solid var(--line);
+    background:var(--card);padding:5px 11px;border-radius:6px;font-weight:500;
+  }
+  .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}
+  .chips span{
+    font-size:12px;color:var(--brand);background:var(--brand-soft);
+    padding:6px 11px;border-radius:20px;font-weight:600;
+  }
+
+  .cta{
+    display:flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--cta);color:#fff;text-decoration:none;font-weight:600;font-size:15px;
+    padding:15px;border-radius:12px;margin-bottom:26px;
+    box-shadow:0 8px 20px rgba(168,93,52,.28);
+    transition:transform .15s, box-shadow .15s;
+  }
+  .cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(168,93,52,.34)}
+  .cta svg{width:20px;height:20px}
+
+  .label{
+    font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--muted);font-weight:700;margin:0 2px 10px;
+  }
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:14px;
+    padding:18px;margin-bottom:14px;
+    box-shadow:0 4px 14px rgba(150,100,55,.07);
+  }
+  .card h2{font-size:15.5px;font-weight:700;display:flex;align-items:center;gap:9px}
+  .card h2 svg{width:18px;height:18px;color:var(--brand);flex:0 0 auto}
+  .card .where{font-size:12px;color:var(--brand);font-weight:600;margin-top:3px}
+  .card p{font-size:13px;color:var(--muted);margin-top:9px}
+  .card ul{list-style:none;margin:12px 0 0}
+  .card li{
+    font-size:13px;padding:7px 0 7px 20px;position:relative;border-top:1px solid var(--line);
+  }
+  .card li:first-child{border-top:none}
+  .card li::before{
+    content:"";position:absolute;left:2px;top:13px;width:6px;height:6px;
+    border-radius:50%;background:var(--brand);
+  }
+  .note{font-size:11.5px;color:var(--muted);margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+  .ask{
+    display:inline-flex;align-items:center;gap:7px;margin-top:14px;
+    color:var(--brand);text-decoration:none;font-size:13px;font-weight:600;
+  }
+  .ask:hover{text-decoration:underline}
+
+  footer{margin-top:24px;text-align:center}
+  .social{display:flex;gap:14px;justify-content:center;margin-bottom:16px}
+  .social a{
+    width:42px;height:42px;border-radius:8px;border:1px solid var(--line);background:var(--card);
+    display:flex;align-items:center;justify-content:center;color:var(--brand);text-decoration:none;
+    transition:background .15s;
+  }
+  .social a:hover{background:var(--brand-soft)}
+  .social svg{width:20px;height:20px}
+  .fine{font-size:11px;color:var(--muted);line-height:1.6}
+</style>
+</head>
+<body>
+  <main class="wrap">
+
+    <header class="reveal">
+      <div class="avatar" role="img" aria-label="Maximiliano Fernández Tello"
+           style="background-image:url('retrato.jpg')"></div>
+      <h1>Maximiliano Fernández Tello</h1>
+      <div class="role">Psicólogo &amp; Mediador Familiar</div>
+      <p class="tagline">Construyo convivencia, transformo familias y promuevo la vida sana.</p>
+      <div class="places">
+        <span>Viña del Mar</span>
+        <span>Santiago</span>
+        <span>Online</span>
+      </div>
+    </header>
+
+    <a class="cta reveal" href="https://wa.me/56966936893?text=Hola%20Maximiliano%2C%20vi%20tu%20perfil%20y%20quiero%20agendar%20una%20hora.">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.595zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      Agendar una hora
+    </a>
+
+    <div class="label reveal">Servicios</div>
+
+    <section class="card reveal">
+      <h2>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Atención psicológica
+      </h2>
+      <div class="where">Viña del Mar · Santiago · Online</div>
+      <p>Un espacio cercano y sin juicios para adolescentes, jóvenes y sus familias. Hablamos de lo que cuesta hablar y buscamos juntos cómo estar mejor.</p>
+      <div class="chips">
+        <span>🧩 Conducta adolescente</span>
+        <span>🌿 Consumo problemático</span>
+        <span>🤝 Apoyo a padres</span>
+      </div>
+      <ul>
+        <li>Adolescentes con problemas de conducta: límites, rabia, motivación y colegio</li>
+        <li>Consumo problemático de alcohol y drogas, con un enfoque sin prejuicios</li>
+        <li>Acompañamiento a padres con herramientas concretas para el día a día</li>
+      </ul>
+      <a class="ask" href="https://wa.me/56966936893?text=Hola%2C%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20de%20atenci%C3%B3n%20psicol%C3%B3gica.">Consultar y agendar →</a>
+    </section>
+
+    <section class="card reveal">
+      <h2>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M7 6l-4 7a4 4 0 0 0 8 0L7 6z"/><path d="M17 6l-4 7a4 4 0 0 0 8 0l-4-7z"/><path d="M12 3v18"/><path d="M8 21h8"/></svg>
+        Mediación familiar
+      </h2>
+      <div class="where">Corte de Apelaciones de Santiago · online y presencial</div>
+      <p>Un espacio voluntario y confidencial para llegar a acuerdos sin enfrentarse en tribunales. Como mediador inscrito, el acta de acuerdo, aprobada por el Tribunal de Familia, tiene valor de sentencia.</p>
+      <ul>
+        <li>Pensión de alimentos (fijación, aumento, rebaja o cese)</li>
+        <li>Cuidado personal de los hijos (tuición)</li>
+        <li>Relación directa y regular (régimen de visitas)</li>
+      </ul>
+      <p class="note">No se median, por ley, casos de violencia intrafamiliar, maltrato a niños, niñas o adolescentes, estado civil, interdicción ni adopción.</p>
+      <a class="ask" href="https://wa.me/56966936893?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20mediaci%C3%B3n%20familiar%20en%20Santiago.">Consultar mediación →</a>
+    </section>
+
+    <footer class="reveal">
+      <div class="social">
+        <a href="https://www.instagram.com/maxfernandez.psicologo/" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="mailto:mfernandeztello.ps@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        </a>
+      </div>
+      <p class="fine">El contenido de redes no reemplaza una consulta profesional.</p>
+    </footer>
+
+  </main>
+
+  <script>
+    (function(){
+      var els = document.querySelectorAll('.reveal');
+      if(!('IntersectionObserver' in window)){
+        els.forEach(function(el){ el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            e.target.style.transitionDelay = (e.target.dataset.delay || '0') + 'ms';
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(function(el, i){
+        el.dataset.delay = Math.min(i * 90, 450);
+        io.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
